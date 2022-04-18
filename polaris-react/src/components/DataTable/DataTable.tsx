@@ -542,6 +542,10 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
     }
   };
 
+  private onHover = (row: number) => {
+    this.setState({rowHovered: row});
+  };
+
   private navigateTable = (direction: string) => {
     const {currentColumn, previousColumn} = this.state;
     const {current: scrollContainer} = this.scrollContainer;
