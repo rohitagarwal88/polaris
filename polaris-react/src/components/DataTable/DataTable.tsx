@@ -246,6 +246,7 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
         isScrolledFarthestRight={isScrolledFarthestRight}
         navigateTableLeft={this.navigateTable('left')}
         navigateTableRight={this.navigateTable('right')}
+        ref={this.navigation}
       />
     );
 
