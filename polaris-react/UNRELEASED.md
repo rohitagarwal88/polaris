@@ -12,6 +12,10 @@ Use [the changelog guidelines](/documentation/Versioning%20and%20changelog.md) t
 - Added support for tooltips on Navigation items ([#5750](https://github.com/Shopify/polaris/pull/5750))
 - Change types for DataTable `totalsName` prop to allow for ReactNode ([#5454](https://github.com/Shopify/polaris/pull/5365/))
 - Implemented accessibility role and attributes in `SettingToggle` ([#5470](https://github.com/Shopify/polaris/pull/5470))
+- Added support for setting a `ReactNode` on the `PageActions` `secondaryActions` prop ([#5495](https://github.com/Shopify/polaris/pull/5495))
+
+- Added support for NodeJS v14 ([#5551](https://github.com/Shopify/polaris/pull/5551))
+- Added an optional `fixedFirstColumn` prop to the `DataTable` ([#5539](https://github.com/Shopify/polaris/pull/5539))
 
 ### Bug fixes
 
