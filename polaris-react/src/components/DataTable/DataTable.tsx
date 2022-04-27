@@ -263,6 +263,24 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
                 styles.StickyTableHeader,
                 isSticky && styles['StickyTableHeader-isSticky'],
               );
+              const stickyHeaderFixedFirstColumnContent = headings.slice(0, 1);
+              const stickyHeaderFixedFirstColumn = (
+                <table
+                  className={classNames(
+                    styles.FixedFirstColumn,
+                    !isScrolledFarthestLeft && styles.Visible,
+                  )}
+                >
+                  <thead>
+                    <tr>
+                      {stickyHeaderFixedFirstColumnContent.map(
+                        (heading, index) =>
+                          this.renderHeadings(heading, index, true),
+                      )}
+                    </tr>
+                  </thead>
+                </table>
+              );
 
               return (
                 <div className={stickyHeaderClassNames}>
@@ -271,6 +289,7 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
                     className={styles.StickyTableHeadingsRow}
                     ref={this.stickyTableHeadingsRow}
                   >
+                    {stickyHeaderFixedFirstColumn}
                     {headings.map((heading, index) => {
                       const {
                         sortable,
