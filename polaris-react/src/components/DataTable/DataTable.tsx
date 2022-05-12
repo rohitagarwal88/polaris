@@ -323,6 +323,7 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
 
                       return (
                         <Cell
+                          key={id}
                           stickyHeadingCell
                           setRef={(ref) =>
                             this.setCellRef({
@@ -339,7 +340,6 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
                           {...sortableHeadingProps}
                           verticalAlign={verticalAlign}
                           stickyCellWidth={this.tableHeadingWidths[index]}
-                          key={id}
                         />
                       );
                     })}
