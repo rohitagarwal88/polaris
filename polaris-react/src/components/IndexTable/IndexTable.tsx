@@ -45,6 +45,7 @@ export interface IndexTableBaseProps {
   children?: React.ReactNode;
   emptyState?: React.ReactNode;
   sort?: React.ReactNode;
+  paginatedSelectAllActionText?: string;
   lastColumnSticky?: boolean;
   selectable?: boolean;
 }
@@ -66,6 +67,7 @@ function IndexTableBase({
   children,
   emptyState,
   sort,
+  paginatedSelectAllActionText,
   lastColumnSticky = false,
   ...restProps
 }: IndexTableBaseProps) {
@@ -745,13 +747,17 @@ function IndexTableBase({
       return;
     }
 
+    const customActionText =
+      paginatedSelectAllActionText ??
+      i18n.translate('Polaris.IndexTable.selectAllItems', {
+        itemsLength: itemCount,
+        resourceNamePlural: resourceName.plural.toLocaleLowerCase(),
+      });
+
     const actionText =
       selectedItemsCount === SELECT_ALL_ITEMS
         ? i18n.translate('Polaris.IndexTable.undo')
-        : i18n.translate('Polaris.IndexTable.selectAllItems', {
-            itemsLength: itemCount,
-            resourceNamePlural: resourceName.plural.toLocaleLowerCase(),
-          });
+        : customActionText;
 
     return {
       content: actionText,
