@@ -2,19 +2,10 @@
 name: Fullscreen bar
 category: Navigation
 keywords:
-  - global chrome
-  - global features
   - topbar
   - top bar
   - header
-  - nav bar
   - bar
-  - navbar
-  - brand
-  - search
-  - user
-  - menu
-  - logo
   - app
 ---
 
