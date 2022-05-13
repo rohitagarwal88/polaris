@@ -10,11 +10,14 @@ Use [the changelog guidelines](/documentation/Versioning%20and%20changelog.md) t
 - Added `extraSmall` to the available sizes of the `Thumbnail` and `SkeletonThumbnail` ([#5770](https://github.com/Shopify/polaris/pull/5770))
 - Updated experimental breakpoint values ([#5804](https://github.com/Shopify/polaris/pull/5804))
 - Added support for tooltips on Navigation items ([#5750](https://github.com/Shopify/polaris/pull/5750))
+- Removed `info` status as default prop value for `Badge.Pip`. The default color is `--p-icon` ([#5798](https://github.com/Shopify/polaris/pull/5798))
 
 ### Bug fixes
 
 - Fixed vertical scroll on small screens in `EmptyState` ([#5779](https://github.com/Shopify/polaris/pull/5779))
 - Fixed broken links in documentation ([#5824](https://github.com/Shopify/polaris/pull/5824))
+
+- Fixed `Badge` and `Pip` having different background colors for `new` and `info` status ([#5798](https://github.com/Shopify/polaris/pull/5798))
 
 ### Documentation
 
