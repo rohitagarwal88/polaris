@@ -15,6 +15,7 @@ Use [the changelog guidelines](/documentation/Versioning%20and%20changelog.md) t
 - Added `customListId` prop to `Listbox` ([5627](https://github.com/Shopify/polaris/pull/5627))
 - Pass `domId` as an argument to `onActiveOptionChange` prop on `Listbox` ([5627](https://github.com/Shopify/polaris/pull/5627))
 - Adjusted a hardcoded `padding` value for `FileUpload` and replaced it with a spacing token ([#5675](https://github.com/Shopify/polaris/pull/5675))
+- Upstreamed updates from the polaris-next IndexTable ([#5785](https://github.com/Shopify/polaris/pull/5785))
 
 ### Bug fixes
 
