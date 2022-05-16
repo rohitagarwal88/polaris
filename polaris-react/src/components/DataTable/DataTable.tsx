@@ -737,7 +737,6 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
               verticalAlign={verticalAlign}
               colSpan={colSpan}
               hovered={hovered}
-              showTooltip={showTooltip}
             />
           );
         })}
