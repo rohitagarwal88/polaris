@@ -160,7 +160,7 @@ export function Cell({
       scope="col"
       aria-sort={sortDirection}
       style={
-        firstColumn
+        firstColumn && !truncate
           ? {
               minWidth: firstColumnMinWidth,
               maxWidth: firstColumnMinWidth,
@@ -172,10 +172,14 @@ export function Cell({
     </th>
   ) : (
     <th
-      style={{
-        minWidth: firstColumnMinWidth,
-        maxWidth: firstColumnMinWidth,
-      }}
+      style={
+        !truncate
+          ? {
+              minWidth: firstColumnMinWidth,
+              maxWidth: firstColumnMinWidth,
+            }
+          : {}
+      }
       className={className}
       scope="row"
       {...colSpanProp}
