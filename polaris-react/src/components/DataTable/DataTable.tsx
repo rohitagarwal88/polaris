@@ -84,6 +84,7 @@ export interface DataTableProps {
   stickyHeader?: boolean;
   /** Add a fixed first column on horizontal scroll. */
   hasFixedFirstColumn?: boolean;
+  firstColumnMinWidth?: string;
 }
 
 type CombinedProps = DataTableProps & {
@@ -160,6 +161,7 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
       hasZebraStripingOnData = false,
       stickyHeader = false,
       hasFixedFirstColumn = false,
+      firstColumnMinWidth,
     } = this.props;
     const {
       condensed,
@@ -194,6 +196,7 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
             headingIndex: index,
             inFixedFirstColumn: false,
             inStickyHeader: false,
+            firstColumnMinWidth,
           }),
         )}
       </tr>
@@ -278,6 +281,7 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
                     headingIndex: 0,
                     inFixedFirstColumn: true,
                     inStickyHeader: true,
+                    firstColumnMinWidth,
                   })
                 : null;
 
@@ -295,6 +299,7 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
                         headingIndex: index,
                         inFixedFirstColumn: false,
                         inStickyHeader: true,
+                        firstColumnMinWidth,
                       });
                     })}
                   </div>
@@ -547,11 +552,13 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
     headingIndex,
     inFixedFirstColumn,
     inStickyHeader,
+    firstColumnMinWidth,
   }: {
     heading: string | ReactNode;
     headingIndex: number;
     inFixedFirstColumn: boolean;
     inStickyHeader: boolean;
+    firstColumnMinWidth?: string;
   }) => {
     const {
       sortable,
@@ -618,6 +625,7 @@ class DataTableInner extends PureComponent<CombinedProps, DataTableState> {
         handleFocus={this.handleFocus}
         stickyCellWidth={stickyCellWidth}
         fixedCellVisible={!isScrolledFarthestLeft}
+        firstColumnMinWidth={firstColumnMinWidth}
       />
     );
   };
