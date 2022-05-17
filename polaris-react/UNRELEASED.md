@@ -18,7 +18,6 @@ Use [the changelog guidelines](/documentation/Versioning%20and%20changelog.md) t
 - Fixed broken links in documentation ([#5824](https://github.com/Shopify/polaris/pull/5824))
 
 - Fixed `Badge` and `Pip` having different background colors for `new` and `info` status ([#5798](https://github.com/Shopify/polaris/pull/5798))
-
 ### Documentation
 
 ### Development workflow
